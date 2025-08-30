@@ -1,0 +1,33 @@
+{
+  "version": 8,
+  "sources": {
+    "official_languages": {
+      "type": "vector",
+      "url": "pmtiles:///official-language-map/data/official_languages.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 8,
+      "attribution": "<a href='https://www.naturalearthdata.com/downloads/10m-cultural-vectors/' target='_blank'>Made with Natural Earth</a> | <a href='https://www.interbooks.co.jp/news-room/list-of-languages-and-official-languages-of-the-world/' target='_blank'>世界の言語・公用語一覧</a>"
+    }
+  },
+  "glyphs": "font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgb(170, 211, 223)"
+      }
+    },
+    {
+      "id": "official_languages",
+      "type": "fill",
+      "source": "official_languages",
+      "source-layer": "official_languages",
+      "paint": {
+        "fill-color": "rgb(251, 248, 243)",
+        "fill-opacity": 0.85,
+        "fill-outline-color": "#333"
+      }
+    }
+  ]
+}
