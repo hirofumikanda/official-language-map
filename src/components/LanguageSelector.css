@@ -1,0 +1,96 @@
+/* Language selector component styles */
+.language-selector-container {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  z-index: 1000;
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: calc(100% - 16px);
+  box-sizing: border-box;
+}
+
+.language-selector {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23666" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.language-selector:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.language-selector:hover {
+  border-color: #999;
+}
+
+.country-count {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #495057;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.country-count-number {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .language-selector-container {
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    padding: 8px;
+    width: calc(100% - 8px);
+    max-width: none;
+  }
+  
+  .language-selector {
+    font-size: 16px; /* Maintain 16px to prevent zoom on iOS */
+    padding: 14px 40px 14px 14px; /* Slightly larger touch targets */
+  }
+  
+  .country-count {
+    font-size: 13px;
+    margin-top: 8px;
+    padding: 6px 10px;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .language-selector-container {
+    max-width: 300px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .language-selector-container {
+    max-width: 350px;
+  }
+}

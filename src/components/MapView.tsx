@@ -4,7 +4,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { Protocol } from "pmtiles";
 import { setupPopupHandler } from "../utils/popup";
 import { setupPointerHandler } from "../utils/pointer";
-import { onMapLoad } from "../utils/onMapLoad";
+import "./LanguageSelector.css";
 
 const languages = [
   { value: "", label: "すべての言語" },
@@ -98,10 +98,9 @@ const MapView = () => {
 
     mapRef.current = map;
 
-    map.addControl(new maplibregl.NavigationControl(), "top-right");
+    map.addControl(new maplibregl.NavigationControl(), "bottom-right");
 
     map.on("load", () => {
-      onMapLoad(map);
       setMapLoaded(true);
     });
 
@@ -116,26 +115,11 @@ const MapView = () => {
 
   return (
     <>
-      <div style={{
-        position: "absolute",
-        top: "10px",
-        left: "10px",
-        zIndex: 1000,
-        backgroundColor: "white",
-        padding: "10px",
-        borderRadius: "5px",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
-      }}>
+      <div className="language-selector-container">
         <select 
           value={selectedLanguage}
           onChange={(e) => setSelectedLanguage(e.target.value)}
-          style={{
-            padding: "5px 10px",
-            border: "1px solid #ccc",
-            borderRadius: "3px",
-            fontSize: "14px",
-            minWidth: "200px"
-          }}
+          className="language-selector"
         >
           {languages.map((lang) => (
             <option key={lang.value} value={lang.value}>
@@ -144,13 +128,8 @@ const MapView = () => {
           ))}
         </select>
         {selectedLanguage && (
-          <div style={{
-            marginTop: "8px",
-            fontSize: "14px",
-            color: "#666",
-            fontWeight: "500"
-          }}>
-            該当する国・地域: {matchingCountriesCount}件
+          <div className="country-count">
+            該当する国・地域: <span className="country-count-number">{matchingCountriesCount}</span>件
           </div>
         )}
       </div>
