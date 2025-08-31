@@ -21,6 +21,9 @@
 - **レスポンシブデザイン**: デスクトップ・モバイル対応
 - **GitHub Pages**: 静的サイトとして自動デプロイ
 
+## デモ
+[GitHub Pagesで公開中](https://hirofumikanda.github.io/official-language-map/)
+
 ## 🚀 開発環境のセットアップ
 
 ### 必要な環境
