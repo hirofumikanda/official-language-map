@@ -94,3 +94,29 @@
     max-width: 350px;
   }
 }
+
+/* Desktop optimizations */
+@media (min-width: 769px) {
+  .language-selector-container {
+    max-width: 280px; /* デスクトップではより小さく */
+    padding: 10px; /* パディングも小さく */
+    top: 10px;
+    left: 10px;
+    right: auto; /* 右端まで広がらないように */
+    width: auto; /* 固定幅 */
+  }
+  
+  .language-selector {
+    font-size: 14px; /* デスクトップでは小さなフォント */
+    padding: 8px 32px 8px 12px; /* パディングを小さく */
+    border: 1px solid #ccc; /* ボーダーも細く */
+    background-size: 10px; /* 矢印アイコンも小さく */
+    background-position: right 10px center;
+  }
+  
+  .country-count {
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 6px 10px;
+  }
+}
