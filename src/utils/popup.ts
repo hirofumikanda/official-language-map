@@ -27,6 +27,8 @@ const buildPopupContent = (feature: MapGeoJSONFeature): string => {
   for (const key in props) {
     let label = key;
     if (label === 'official_languages') label = '公用語';
+    if (label === 'name') label = '国名';
+    if (label === 'name_ja') label = '国名（日本語）';
     let value = props[key];
     if (Object.prototype.hasOwnProperty.call(props, key)) {
       let valueHtml = escapeHTML(String(value));
