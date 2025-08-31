@@ -60,7 +60,6 @@ public/
 │   └── official_languages.pmtiles  # ベクタータイルデータ
 ├── styles/
 │   └── style.json           # MapLibre GLスタイル定義
-├── img/                     # 国旗画像
 └── font/                    # カスタムフォント
 ```
 
